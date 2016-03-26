@@ -1,0 +1,33 @@
+<ion-view style="" title="Login" ng-init="init()">
+    <ion-content scroll="true">
+        <div style="padding: 20px;text-align: center">
+            <p>
+                <i class="ion-heart" style="font-size: 7em;color:rgb(204, 13, 13)"></i>
+            </p>
+            <h3>Solidarize</h3>
+            <div style="height: 30px"></div>
+            <button class="button button-outline button-positive">
+                Facebook
+            </button>
+            <p>Ou</p>
+        </div>
+        <form ng-submit="login()">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <span class="input-label">E-mail</span>
+                    <input type="text">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Senha</span>
+                    <input type="password">
+                </label>
+                <button type="submit" class="button button-block  button-outline button-positive">
+                    Entrar
+                </button>
+            </div>
+        </form>
+        <p align="center">
+            Não possui cadastro? <a href="/#/registro">Registre-se</a>
+        </p>
+    </ion-content>
+</ion-view>

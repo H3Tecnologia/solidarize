@@ -1,5 +1,52 @@
 .loader {
-  text-align: center;
-  width: 100%;
-  padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.item-divider-custom {
+    border-top: 0;
+    border: 0;
+    background-color: white;
+    border-bottom: 2px solid red;
+}
+
+.bg-content {
+    background-color: rgb(242, 242, 242);
+}
+
+.bar-header {
+    border: 2px solid red !important;
+    border-left: 0 !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+}
+
+.btn-header {
+    border: 0;
+    background-color: white;
+    font-size: 2em!important;
+    color: red;
+}
+
+
+.avatar-img{
+	width: 100px; border-radius: 50px; padding: 20px;float:left
+}
+.avatar-nome{
+	margin-top: 30px; position: absolute;
+}
+.avatar-email{
+	margin-top: 45px; position: absolute; font-size: 0.8em;
+}
+
+.menu-bg,.menu-bg a{
+	background-color:black;
+	color:white;
+	border: 0px none;
+	text-decoration:unset;
+}
+
+.menu-bg-spacing a{
+	padding-left: 75px;
 }

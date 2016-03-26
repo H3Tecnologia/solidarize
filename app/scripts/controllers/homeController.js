@@ -7,21 +7,12 @@
  * # HomeController
  */
 angular.module('Solidarize')
-  .controller('HomeController', function($scope, ExampleService) {
+    .controller('HomeController', function($scope, $location) {
 
-    $scope.myHTML = null;
+        $scope.myHTML = null;
+        $scope.$broadcast('scroll.refreshComplete');
 
-    // just an example...
-    $scope.fetchRandomText = function() {
-      ExampleService.doSomethingAsync()
-        .then(ExampleService.fetchSomethingFromServer)
-        .then(function(response) {
-            $scope.myHTML = response.data.text;
-            // close pull to refresh loader
-            $scope.$broadcast('scroll.refreshComplete');
-        });
-    };
-
-    $scope.fetchRandomText();
-
-  });
+        $scope.goBusca = function() {
+            $location.path('app/busca');
+        };
+    });

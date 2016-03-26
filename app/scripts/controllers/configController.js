@@ -7,7 +7,7 @@
  * # SettingsController
  */
 angular.module('Solidarize')
-  .controller('SettingsController', function($scope) {
+  .controller('configController', function($scope) {
 
     // do something with $scope
 

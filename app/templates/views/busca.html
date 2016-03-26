@@ -1,0 +1,53 @@
+<ion-view title="Buscar">
+    <ion-content class="bg-content">
+
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon" style="color:rgb(246, 128, 152)"></i>
+                <input type="text" placeholder="O que você está procurando?">
+            </label>
+        </div>
+        <div class="list list-inset">
+            <div class="item item-divider item-divider-custom">
+                Categorias
+            </div>
+            <ion-list>
+                <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
+                <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+                <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+            </ion-list>
+        </div>
+        <div class="list list-inset">
+            <div class="item item-divider item-divider-custom">
+                Distância
+            </div>
+            <ion-list>
+                <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
+                <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+                <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+            </ion-list>
+        </div>
+        <div class="list list-inset">
+            <div class="item item-divider item-divider-custom">
+                Ordenar por
+            </div>
+            <ion-list>
+                <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
+                <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+                <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+            </ion-list>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-block button-outline button-assertive">
+                    Limpar
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-outline button-assertive">
+                    Aplicar
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
