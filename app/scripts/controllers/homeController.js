@@ -7,8 +7,8 @@
  * # HomeController
  */
 angular.module('Solidarize')
-    .controller('HomeController', function($scope, $location) {
-
+    .controller('HomeController', function($scope, $location,$ionicLoading) {
+    	// $ionicLoading.show();
         $scope.myHTML = null;
         $scope.$broadcast('scroll.refreshComplete');
 

@@ -56,7 +56,7 @@ angular.module('Solidarize', ['ionic', 'ngCordova', 'ngResource'])
             }
         })
         .state('app.anuncio', {
-            url: '/anuncio',
+            url: '/anuncio/:id',
             cache: true,
             views: {
                 'viewContent': {
@@ -176,4 +176,6 @@ angular.module('Solidarize', ['ionic', 'ngCordova', 'ngResource'])
             }
         });
     $urlRouterProvider.otherwise('/login');
+}).constant('$ionicLoadingConfig', {
+  template: 'Carregando... <br/> <ion-spinner></ion-spinner>'
 });
