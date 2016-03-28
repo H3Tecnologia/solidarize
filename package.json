@@ -51,18 +51,6 @@
   },
   "cordovaPlugins": [
     "cordova-plugin-camera",
-    {
-      "locator": "https://github.com/EddyVerbruggen/cordova-plugin-actionsheet.git",
-      "id": "cordova-plugin-actionsheet"
-    },
-    {
-      "locator": "https://github.com/ohh2ahh/AppAvailability.git",
-      "id": "cordova-plugin-appavailability"
-    },
-    {
-      "locator": "https://github.com/VersoSolutions/CordovaClipboard.git",
-      "id": "com.verso.cordova.clipboard"
-    },
     "cordova-plugin-contacts",
     "cordova-plugin-device",
     "cordova-plugin-geolocation",
@@ -78,7 +66,12 @@
       "locator": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git",
       "id": "cordova-plugin-x-toast"
     },
-    "cordova-plugin-crosswalk-webview"
+    "cordova-plugin-crosswalk-webview",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [
     "android",

@@ -1,26 +1,27 @@
 <ion-view>
  <ion-nav-buttons side="right">
-        <button class="button btn-header">
+        <button class="button btn-header" ng-click="share()">
             <i class="ion-android-share-alt"></i>
         </button>
-        <button class="button btn-header">
-            <i class="ion-ios-heart-outline"></i>
+        <button class="button btn-header" ng-click="addfavorites()">
+            <!-- <i class="ion-ios-heart-outline"></i> -->
+            <i class="ion-ios-heart" style="color:red"></i>
         </button>
     </ion-nav-buttons>
-    <ion-content class="bg-content has-header">
-        <ion-slide-box on-slide-changed="slideHasChanged($index)">
-            <ion-slide ng-repeat="i in aImages">
+    <ion-content class="bg-content has-header" >
+        <ion-slide-box on-slide-changed="slideHasChanged($index)" style="max-height: 300px!important;" lazy-scroll> 
+            <ion-slide ng-repeat="i in aImages" >
                 <div class="box" style="max-height:300px">
                     <a ng-click="goToSlide($index)">
-                        <img src="{{i.src}}" alt="" style="width:100%;">
+                        <img image-lazy-src="{{i.src}}" src="{{i.src}}" image-lazy-background-image="true" lazy-scroll-resize="true" image-lazy-loader="lines" image-lazy-distance-from-right-to-load="100" alt="" style="width:100%;">
                     </a>
                 </div>
             </ion-slide>
         </ion-slide-box>
         <div style="border-bottom: 1px solid #c2c2c2; height: 60px;">
             <img style="width: 60px; border-radius: 50px; padding: 5px; float: left;" src="images/profile.jpg">
-            <span style="margin-top: 12px; position: absolute;"><a style="text-decoration: unset;color: rgb(171, 166, 166);" href="/#/app/perfil">João Gabriel</a></span>
-            <span style="position: absolute; margin-top: 28px; font-size: 0.8em; color: rgb(171, 166, 166);">(4 amigos em comum)</span>
+            <span style="margin-top: 12px; position: absolute;width:100%"><a style="text-decoration: none;color: rgb(171, 166, 166);" href="/#/app/perfil">João Gabriel</a></span>
+            <span style="position: absolute;width:100%; font-size: 0.8em; color: rgb(171, 166, 166); margin-top: 30px;">(4 amigos em comum)</span>
             <span style="color: rgb(171, 166, 166); position: relative; float: right; right: 5px;top: 20px; font-size: 0.8em;">22 horas atrás</span>
         </div>
         <div style="padding: 15px;">
@@ -59,7 +60,7 @@
                 <button class="button button-block button-outline button-assertive" style="margin-top: 5px;height: 50px;">Falar no chat</button>
             </div>
             <div class="col bg-content" style="padding-bottom: 0; padding-top: 0;">
-                <button class="button button-block button-outline button-assertive" style="margin-top: 5px;height: 50px;">Eu quero!</button>
+                <button class="button button-block button-outline button-assertive" style="margin-top: 5px;height: 50px;">Eu Preciso!</button>
             </div>
         </div>
     </ion-footer-bar>

@@ -27,3 +27,7 @@ Custos da manutenção
 Formas de arrecadação
 
 Patrocinador Padrinho Patreon 
+
+
+cordova plugin add cordova-plugin-facebook4 --save --variable APP_ID="823308291113438" --variable APP_NAME="Solidarize"
+

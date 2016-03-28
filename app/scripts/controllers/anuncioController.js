@@ -7,9 +7,26 @@
  * # loginController
  */
 angular.module('Solidarize')
-    .controller('anuncioController', function($scope, $ionicSlideBoxDelegate,$ionicModal) {
+    .controller('anuncioController', function($scope, $ionicSlideBoxDelegate, $ionicModal, $cordovaSocialSharing) {
 
         $scope.template = '<div class="modal image-modal transparent"ng-click="closeModal()"><ion-slide-box on-slide-changed="slideChanged(index)"show-pager="false"><ion-slide ng-repeat="oImage in aImages"><img ng-src="{{oImage.src}}" class="fullscreen-image" /><p class="info">{{oImage.msg}}</p></ion-slide></ion-slide-box></div>';
+        $scope.share_msg = "Encontrei esse item no Solidarize e pode ser do seu interesse";
+        $scope.share_subject = "Solidarize - Mudando a vida das pessoas";
+        $scope.share_link = "http://solidarizeapp.com";
+        $scope.share = function() {
+            $cordovaSocialSharing
+                .share($scope.share_msg, $scope.share_subject, "", $scope.share_link)
+                .then(function(result) {
+                    console.log(result);
+                    alert("Compartilhado com sucesso!")
+                }, function(err) {
+                    console.log(err);
+                    alert("ocorreu um erro ao compartilhar!")
+                });
+        };
+        /*
+        slider's
+        */
         $scope.aImages = [{
             'src': 'images/sample/1.jpg',
             'msg': ''

@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 
-angular.module('Solidarize', ['ionic', 'ngCordova', 'ngResource'])
+angular.module('Solidarize', ['ionic', 'ngCordova', 'ngResource','ionicLazyLoad'])
 
 .run(function($ionicPlatform, $cordovaGoogleAnalytics) {
         try {
