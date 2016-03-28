@@ -14,7 +14,7 @@ angular.module('Solidarize', ['ionic', 'ngCordova', 'ngResource'])
 .run(function($ionicPlatform, $cordovaGoogleAnalytics) {
         try {
             Backendless.initApp("BE5B9D3B-C19E-993F-FF36-D6B6A013B900", "B0B7AC8D-FB1E-34E5-FF05-0F2EBA62D500", "v1");
-        } catch (e) {alert(e);}
+        } catch (e) { alert(e); }
         $ionicPlatform.ready(function() {
             if (window.cordova) {
                 try {
@@ -57,12 +57,13 @@ angular.module('Solidarize', ['ionic', 'ngCordova', 'ngResource'])
                 }
             })
             .state('app.anuncio', {
-                url: '/anuncio',
+                url: '/anuncio/:id',
                 cache: true,
                 views: {
                     'viewContent': {
                         templateUrl: 'templates/views/anuncio.html',
                         controller: 'anuncioController'
+
                     }
                 }
             })
@@ -177,4 +178,6 @@ angular.module('Solidarize', ['ionic', 'ngCordova', 'ngResource'])
                 }
             });
         $urlRouterProvider.otherwise('/login');
+    }).constant('$ionicLoadingConfig', {
+        template: 'Carregando... <br/> <ion-spinner></ion-spinner>'
     });
