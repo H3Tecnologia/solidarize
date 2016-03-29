@@ -1,33 +1,35 @@
 <ion-view style="border-top: 4px solid red;" title="Login" ng-init="init()">
-    <ion-content scroll="true">
-        <div style="padding-top: 10px;text-align: center">
-            <p>
-                <i class="ion-heart" style="font-size: 3em;color:rgb(204, 13, 13)"></i>
-            </p>
-            <h3>Solidarize</h3>
-            <div style="height: 10px"></div>
-            <button class="button button-outline button-positive">
-                Facebook
-            </button>
-        </div>
-        <p style="text-align: center">Ou</p>
-        <form ng-submit="login()">
-            <div class="list list-inset">
-                <label class="item item-input">
-                    <span class="input-label">E-mail</span>
-                    <input type="text">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Senha</span>
-                    <input type="password">
-                </label>
-                <button type="submit" class="button button-block button-assertive">
-                    Entrar
-                </button>
+    <ion-content class="bg-color" overflow-scroll="false" scroll="false" style="height: 100%;display: table !important;width: 100% !important;height: 100% !important;">
+        <div class="scrollcenter">
+            <div class="spacer header-login"></div>
+            <div class="row row-center">
+                <div class="col col-center" style="padding-left: 15px;padding-right: 15px;">
+                    <p>
+                        <i class="ion-heart" style="font-size: 3em;color:rgb(204, 13, 13)"></i>
+                    </p>
+                    <h3>Solidarize</h3>
+                    <form style="" class="list list-login ng-pristine ng-valid ng-valid-email" ng-submit="login()" style="text-align: justify;">
+                        <a class="button button-positive button-outline btn btn-fb" style="min-height: 0px !important;padding: 0px !important;font-size: 0.9em;width: 100% !important;" ng-click="facebookSignIn()">Entrar com Facebook</a>
+                        <div style="width: 100%;height: 22px;text-align: center;margin-top: 10px;margin-bottom: 10px;" class="spacer">
+                            - Ou -
+                        </div>
+                        <ion-list class="disable-user-behavior" style="">
+                            <div class="list">
+                                <label class="item item-input input-login-first" style="border-color: #DDD;">
+                                    <span class="input-label">E-mail</span>
+                                    <input class="ng-pristine ng-untouched ng-valid ng-valid-email" placeholder="" ng-model="user.email" oninvalid="setCustomValidity('Insira um e-mail válido')" type="email">
+                                </label>
+                                <label class="item item-input input-login-last" style="border-color: #DDD;">
+                                    <span class="input-label">Senha</span>
+                                    <input class="ng-pristine ng-untouched ng-valid" placeholder="" ng-model="user.password" type="password">
+                                </label>
+                            </div>
+                        </ion-list>
+                        <div style="width: 286px; height: 20px;" class="spacer"></div>
+                        <button style="min-height: 0px !important;padding: 0px !important;font-size: 0.9em;" class="button button-assertive button-block ">Entrar</button>
+                    </form>
+                </div>
             </div>
-        </form>
-        <p align="center">
-            Não possui cadastro? <a href="/#/registro">Registre-se</a>
-        </p>
+        </div>
     </ion-content>
 </ion-view>

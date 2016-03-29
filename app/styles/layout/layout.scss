@@ -99,3 +99,11 @@ p.info {
     opacity: 0;
   }
 }
+
+
+.scrollcenter {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        transform: translate3d(0px, 0px, 0px) scale(1);
+    }
